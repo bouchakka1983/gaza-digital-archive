@@ -10,58 +10,58 @@ const Music = () => {
   const songs = [
     {
       id: 1,
-      title: "يا غزة",
-      artist: "محمد عساف",
-      description: "أغنية تتغنى بجمال غزة وصمودها",
+      title: "Ya Gaza",
+      artist: "Mohammed Assaf",
+      description: "A song celebrating Gaza's beauty and resilience",
       duration: "4:32",
-      category: "معاصر"
+      category: "Contemporary"
     },
     {
       id: 2,
-      title: "من غزة",
-      artist: "فرقة العاشقين",
-      description: "لحن تراثي يحكي عن تاريخ المدينة",
+      title: "From Gaza",
+      artist: "Al-Ashiqeen Band",
+      description: "A traditional melody telling the city's history",
       duration: "3:45",
-      category: "تراثي"
+      category: "Traditional"
     },
     {
       id: 3,
-      title: "حكاية شاطئ",
-      artist: "ليلى مراد",
-      description: "أغنية عن ساحل غزة الجميل",
+      title: "Shore Story",
+      artist: "Leila Mourad",
+      description: "A song about Gaza's beautiful coastline",
       duration: "5:12",
-      category: "كلاسيكي"
+      category: "Classic"
     },
     {
       id: 4,
-      title: "زيتون غزة",
-      artist: "فرقة التراث",
-      description: "أغنية شعبية عن أشجار الزيتون",
+      title: "Gaza Olives",
+      artist: "Heritage Band",
+      description: "A folk song about olive trees",
       duration: "4:18",
-      category: "شعبي"
+      category: "Folk"
     },
     {
       id: 5,
-      title: "يا مسجد عمر",
-      artist: "عبد الحليم حافظ",
-      description: "أغنية دينية عن الجامع العمري",
+      title: "Ya Masjid Omar",
+      artist: "Abdel Halim Hafez",
+      description: "A religious song about the Omari Mosque",
       duration: "6:22",
-      category: "ديني"
+      category: "Religious"
     },
     {
       id: 6,
-      title: "أطفال غزة",
-      artist: "فيروز",
-      description: "أغنية للأطفال تحكي عن الأمل",
+      title: "Children of Gaza",
+      artist: "Fairuz",
+      description: "A children's song about hope",
       duration: "3:55",
-      category: "أطفال"
+      category: "Children"
     }
   ];
 
-  const categories = ["الكل", "معاصر", "تراثي", "كلاسيكي", "شعبي", "ديني", "أطفال"];
-  const [selectedCategory, setSelectedCategory] = useState("الكل");
+  const categories = ["All", "Contemporary", "Traditional", "Classic", "Folk", "Religious", "Children"];
+  const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const filteredSongs = selectedCategory === "الكل" 
+  const filteredSongs = selectedCategory === "All" 
     ? songs 
     : songs.filter(song => song.category === selectedCategory);
 
@@ -74,11 +74,11 @@ const Music = () => {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12 animate-fade-in">
-          <h1 className="text-5xl font-bold font-amiri text-foreground mb-6">
-            أغاني وألحان غزة
+          <h1 className="text-5xl font-bold text-foreground mb-6">
+            Gaza Songs and Melodies
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            مجموعة من الأغاني والألحان التي تحكي قصة غزة وتراثها الموسيقي الغني
+            A collection of songs and melodies that tell Gaza's story and its rich musical heritage
           </p>
         </div>
 
@@ -101,9 +101,9 @@ const Music = () => {
 
         {/* Music Player Interface */}
         <div className="mb-12 bg-gradient-to-r from-gaza-sea/10 to-gaza-olive/10 rounded-lg p-8 animate-fade-in">
-          <div className="flex items-center justify-center space-x-4 space-x-reverse">
+          <div className="flex items-center justify-center space-x-4">
             <Volume2 className="text-gaza-sea w-6 h-6" />
-            <h3 className="text-xl font-amiri text-center">مشغل الموسيقى التراثية</h3>
+            <h3 className="text-xl text-center">Traditional Music Player</h3>
             <Volume2 className="text-gaza-sea w-6 h-6" />
           </div>
         </div>
@@ -119,12 +119,12 @@ const Music = () => {
               <CardHeader>
                 <div className="flex items-center justify-between">
                   <div>
-                    <CardTitle className="text-xl font-amiri text-foreground mb-1">
+                    <CardTitle className="text-xl text-foreground mb-1">
                       {song.title}
                     </CardTitle>
                     <p className="text-palestine-red font-medium">{song.artist}</p>
                   </div>
-                  <div className="flex items-center space-x-2 space-x-reverse">
+                  <div className="flex items-center space-x-2">
                     <span className="text-sm text-muted-foreground">{song.duration}</span>
                     <Button
                       size="sm"
@@ -164,15 +164,15 @@ const Music = () => {
 
         {/* Featured Playlist */}
         <div className="mt-16 bg-palestine-green/10 rounded-lg p-8 animate-fade-in">
-          <h3 className="text-3xl font-amiri font-bold text-center text-foreground mb-6">
-            قائمة تشغيل مميزة
+          <h3 className="text-3xl font-bold text-center text-foreground mb-6">
+            Featured Playlist
           </h3>
           <p className="text-center text-muted-foreground mb-6 leading-relaxed">
-            مجموعة مختارة من أجمل الأغاني التي تحكي قصة غزة عبر التاريخ
+            A curated selection of the most beautiful songs that tell Gaza's story through history
           </p>
           <div className="text-center">
             <Button className="bg-palestine-green hover:bg-palestine-green/90 text-white px-8 py-3 hover-scale">
-              استمع للقائمة الكاملة
+              Listen to Full Playlist
             </Button>
           </div>
         </div>

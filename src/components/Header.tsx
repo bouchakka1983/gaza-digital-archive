@@ -8,13 +8,13 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navigationItems = [
-    { name: 'الرئيسية', path: '/' },
-    { name: 'تاريخ غزة', path: '/history' },
-    { name: 'معرض الصور', path: '/gallery' },
-    { name: 'الأغاني', path: '/music' },
-    { name: 'المقالات', path: '/articles' },
-    { name: 'القصائد', path: '/poems' },
-    { name: 'الفيديو', path: '/videos' },
+    { name: 'Home', path: '/' },
+    { name: 'History', path: '/history' },
+    { name: 'Gallery', path: '/gallery' },
+    { name: 'Music', path: '/music' },
+    { name: 'Articles', path: '/articles' },
+    { name: 'Poems', path: '/poems' },
+    { name: 'Videos', path: '/videos' },
   ];
 
   return (
@@ -22,15 +22,15 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 space-x-reverse">
+          <Link to="/" className="flex items-center space-x-2">
             <div className="w-10 h-10 bg-gradient-to-br from-palestine-red to-palestine-green rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-lg font-amiri">غ</span>
+              <span className="text-white font-bold text-lg">G</span>
             </div>
-            <span className="font-amiri font-bold text-xl text-foreground">المكتبة الرقمية لغزة</span>
+            <span className="font-bold text-xl text-foreground">Gaza Digital Library</span>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-6 space-x-reverse">
+          <nav className="hidden md:flex items-center space-x-6">
             {navigationItems.map((item) => (
               <Link
                 key={item.name}

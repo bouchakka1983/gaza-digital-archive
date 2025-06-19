@@ -6,54 +6,54 @@ const Gallery = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const categories = [
-    { id: 'all', name: 'جميع الصور' },
-    { id: 'historical', name: 'صور تاريخية' },
-    { id: 'architecture', name: 'العمارة' },
-    { id: 'culture', name: 'الثقافة والتراث' },
-    { id: 'nature', name: 'الطبيعة' }
+    { id: 'all', name: 'All Photos' },
+    { id: 'historical', name: 'Historical Photos' },
+    { id: 'architecture', name: 'Architecture' },
+    { id: 'culture', name: 'Culture & Heritage' },
+    { id: 'nature', name: 'Nature' }
   ];
 
   const images = [
     {
       id: 1,
       src: "https://images.unsplash.com/photo-1466442929976-97f336a657be?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      title: "الجامع العمري الكبير",
-      description: "أحد أقدم المساجد في غزة",
+      title: "Great Omari Mosque",
+      description: "One of the oldest mosques in Gaza",
       category: "historical"
     },
     {
       id: 2,
       src: "https://images.unsplash.com/photo-1482881497185-d4a9ddbe4151?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      title: "شاطئ غزة",
-      description: "الساحل الفلسطيني الجميل",
+      title: "Gaza Beach",
+      description: "The beautiful Palestinian coastline",
       category: "nature"
     },
     {
       id: 3,
       src: "https://images.unsplash.com/photo-1426604966848-d7adac402bff?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      title: "البلدة القديمة",
-      description: "أزقة غزة التاريخية",
+      title: "Old City",
+      description: "Gaza's historic alleyways",
       category: "architecture"
     },
     {
       id: 4,
       src: "https://images.unsplash.com/photo-1466442929976-97f336a657be?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      title: "الحرف التراثية",
-      description: "الصناعات التقليدية في غزة",
+      title: "Traditional Crafts",
+      description: "Traditional industries in Gaza",
       category: "culture"
     },
     {
       id: 5,
       src: "https://images.unsplash.com/photo-1482881497185-d4a9ddbe4151?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      title: "ميناء غزة",
-      description: "الميناء التاريخي",
+      title: "Gaza Port",
+      description: "The historic port",
       category: "historical"
     },
     {
       id: 6,
       src: "https://images.unsplash.com/photo-1426604966848-d7adac402bff?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      title: "الأسواق الشعبية",
-      description: "أسواق غزة التراثية",
+      title: "Local Markets",
+      description: "Gaza's traditional markets",
       category: "culture"
     }
   ];
@@ -67,11 +67,11 @@ const Gallery = () => {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12 animate-fade-in">
-          <h1 className="text-5xl font-bold font-amiri text-foreground mb-6">
-            معرض صور غزة
+          <h1 className="text-5xl font-bold text-foreground mb-6">
+            Gaza Photo Gallery
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            مجموعة مختارة من الصور التي تحكي قصة غزة عبر الزمن
+            A curated collection of photos that tell Gaza's story through time
           </p>
         </div>
 
@@ -109,7 +109,7 @@ const Gallery = () => {
                     />
                     <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                       <div className="p-4 text-white">
-                        <h3 className="text-lg font-amiri font-bold mb-1">{image.title}</h3>
+                        <h3 className="text-lg font-bold mb-1">{image.title}</h3>
                         <p className="text-sm opacity-90">{image.description}</p>
                       </div>
                     </div>
@@ -124,7 +124,7 @@ const Gallery = () => {
                     className="w-full h-auto rounded-lg"
                   />
                   <div className="text-center">
-                    <h3 className="text-2xl font-amiri font-bold text-foreground mb-2">
+                    <h3 className="text-2xl font-bold text-foreground mb-2">
                       {image.title}
                     </h3>
                     <p className="text-muted-foreground">{image.description}</p>

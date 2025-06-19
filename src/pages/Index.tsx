@@ -6,43 +6,43 @@ import { Book, Image, Music, FileText, BookOpen, Video } from 'lucide-react';
 const Index = () => {
   const sections = [
     {
-      title: 'تاريخ غزة',
-      description: 'تعرف على التاريخ العريق لمدينة غزة عبر العصور المختلفة',
+      title: 'Gaza History',
+      description: 'Discover the ancient history of Gaza city through different eras',
       icon: Book,
       path: '/history',
       bgColor: 'bg-gaza-sand/10'
     },
     {
-      title: 'معرض الصور',
-      description: 'مجموعة مختارة من الصور التاريخية والمعاصرة لغزة',
+      title: 'Photo Gallery',
+      description: 'A curated collection of historical and contemporary photos of Gaza',
       icon: Image,
       path: '/gallery',
       bgColor: 'bg-gaza-sea/10'
     },
     {
-      title: 'الأغاني',
-      description: 'أغاني وألحان تحكي قصة غزة وتراثها الموسيقي',
+      title: 'Music',
+      description: 'Songs and melodies that tell the story of Gaza and its musical heritage',
       icon: Music,
       path: '/music',
       bgColor: 'bg-gaza-olive/10'
     },
     {
-      title: 'المقالات',
-      description: 'مقالات وبحوث متخصصة حول تاريخ وثقافة غزة',
+      title: 'Articles',
+      description: 'Specialized articles and research about Gaza\'s history and culture',
       icon: FileText,
       path: '/articles',
       bgColor: 'bg-palestine-red/10'
     },
     {
-      title: 'القصائد',
-      description: 'مجموعة من القصائد والشعر الذي يتغنى بجمال غزة',
+      title: 'Poems',
+      description: 'A collection of poems and poetry celebrating the beauty of Gaza',
       icon: BookOpen,
       path: '/poems',
       bgColor: 'bg-palestine-green/10'
     },
     {
-      title: 'الفيديو',
-      description: 'مقاطع فيديو توثيقية وثقافية عن غزة',
+      title: 'Videos',
+      description: 'Documentary and cultural video content about Gaza',
       icon: Video,
       path: '/videos',
       bgColor: 'bg-gaza-gold/10'
@@ -57,12 +57,12 @@ const Index = () => {
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 animate-fade-in">
-            <h2 className="text-4xl font-bold font-amiri text-foreground mb-6">
-              رحلة في تراث غزة
+            <h2 className="text-4xl font-bold text-foreground mb-6">
+              A Journey Through Gaza's Heritage
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              مكتبة رقمية شاملة تجمع بين طياتها كنوز التراث الفلسطيني وتاريخ مدينة غزة العريق، 
-              من خلال مجموعة متنوعة من المواد الرقمية التي توثق الهوية الثقافية الفلسطينية.
+              A comprehensive digital library that brings together treasures of Palestinian heritage and the ancient history of Gaza city, 
+              through a diverse collection of digital materials documenting Palestinian cultural identity.
             </p>
           </div>
         </div>
@@ -85,11 +85,11 @@ const Index = () => {
       <section className="py-16 bg-gradient-to-r from-palestine-red to-palestine-green">
         <div className="container mx-auto px-4 text-center">
           <blockquote className="text-white animate-fade-in">
-            <p className="text-2xl md:text-3xl font-amiri italic mb-4 leading-relaxed">
-              "غزة... حكاية أرض وتاريخ، وقصة شعب لا ينحني"
+            <p className="text-2xl md:text-3xl italic mb-4 leading-relaxed">
+              "Gaza... a tale of land and history, a story of a people who never bow"
             </p>
             <footer className="text-white/80 text-lg">
-              من التراث الفلسطيني
+              From Palestinian Heritage
             </footer>
           </blockquote>
         </div>

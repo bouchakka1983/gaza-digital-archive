@@ -17,11 +17,11 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto animate-fade-in">
-        <h1 className="text-5xl md:text-7xl font-bold font-amiri mb-6 leading-tight">
-          المكتبة الرقمية لغزة
+        <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+          Gaza Digital Library
         </h1>
         <p className="text-xl md:text-2xl mb-8 leading-relaxed opacity-90">
-          رحلة عبر التاريخ والثقافة والتراث الفلسطيني
+          A Journey Through Palestinian History, Culture, and Heritage
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Link to="/history">
@@ -29,7 +29,7 @@ const Hero = () => {
               size="lg" 
               className="bg-palestine-red hover:bg-palestine-red/90 text-white px-8 py-3 text-lg hover-scale"
             >
-              استكشف تاريخ غزة
+              Explore Gaza's History
             </Button>
           </Link>
           <Link to="/gallery">
@@ -38,7 +38,7 @@ const Hero = () => {
               size="lg" 
               className="border-white text-white hover:bg-white hover:text-foreground px-8 py-3 text-lg hover-scale"
             >
-              شاهد المعرض
+              View Gallery
             </Button>
           </Link>
         </div>

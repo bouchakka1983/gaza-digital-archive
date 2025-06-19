@@ -10,94 +10,94 @@ const Poems = () => {
   const poems = [
     {
       id: 1,
-      title: "غزة الحبيبة",
-      poet: "محمود درويش",
-      category: "معاصر",
+      title: "Beloved Gaza",
+      poet: "Mahmoud Darwish",
+      category: "Contemporary",
       lines: [
-        "يا غزة الحبيبة، يا أرض الشموخ",
-        "في قلبك التاريخ يحكي عن البطولة",
-        "وفي عينيك البحر يرقص مع النور",
-        "وأطفالك يحلمون بغد مشرق"
+        "O beloved Gaza, O land of dignity",
+        "In your heart, history tells of heroism",
+        "And in your eyes, the sea dances with light",
+        "And your children dream of a bright tomorrow"
       ],
       year: "1995",
       likes: 342
     },
     {
       id: 2,
-      title: "ساحل العشق",
-      poet: "فدوى طوقان",
-      category: "رومانسي",
+      title: "Shore of Love",
+      poet: "Fadwa Tuqan",
+      category: "Romantic",
       lines: [
-        "على ساحل غزة العريق",
-        "تتراقص الأمواج مع النسيم",
-        "وتحكي حكايات الحب القديم",
-        "في كل حبة رمل ذكرى"
+        "On Gaza's ancient shore",
+        "The waves dance with the breeze",
+        "And tell tales of old love",
+        "In every grain of sand, a memory"
       ],
       year: "1987",
       likes: 256
     },
     {
       id: 3,
-      title: "أزقة البلدة القديمة",
-      poet: "عز الدين المناصرة",
-      category: "تراثي",
+      title: "Old City Alleys",
+      poet: "Izz al-Din al-Manasra",
+      category: "Traditional",
       lines: [
-        "في أزقة غزة القديمة",
-        "تسير الذكريات مع الرياح",
-        "كل حجر يروي قصة",
-        "وكل باب يحتضن تاريخ"
+        "In Gaza's old alleys",
+        "Memories walk with the wind",
+        "Every stone tells a story",
+        "And every door embraces history"
       ],
       year: "1992",
       likes: 189
     },
     {
       id: 4,
-      title: "نداء الفجر",
-      poet: "أحمد شوقي",
-      category: "ديني",
+      title: "Dawn's Call",
+      poet: "Ahmed Shawqi",
+      category: "Religious",
       lines: [
-        "من مئذنة عمر ينادي المؤذن",
-        "والفجر يطل على المدينة",
-        "في غزة تشرق الشمس",
-        "وتضيء قلوب المؤمنين"
+        "From Omar's minaret the muezzin calls",
+        "And dawn breaks over the city",
+        "In Gaza the sun rises",
+        "And illuminates the hearts of believers"
       ],
       year: "1932",
       likes: 298
     },
     {
       id: 5,
-      title: "أطفال الحجارة",
-      poet: "سميح القاسم",
-      category: "مقاومة",
+      title: "Children of Stones",
+      poet: "Samih al-Qasim",
+      category: "Resistance",
       lines: [
-        "في شوارع غزة يلعب الأطفال",
-        "بالحجارة والأحلام",
-        "كل طفل بطل صغير",
-        "يحمل في عينيه نور المستقبل"
+        "In Gaza's streets children play",
+        "With stones and dreams",
+        "Every child is a little hero",
+        "Carrying the light of the future in their eyes"
       ],
       year: "1988",
       likes: 445
     },
     {
       id: 6,
-      title: "عروس البحر",
-      poet: "نزار قباني",
-      category: "وصفي",
+      title: "Bride of the Sea",
+      poet: "Nizar Qabbani",
+      category: "Descriptive",
       lines: [
-        "غزة عروس البحر الأبيض",
-        "ترتدي ثوب الشموخ",
-        "وتزين رأسها بالياسمين",
-        "وتغني للحرية أجمل الألحان"
+        "Gaza, bride of the white sea",
+        "Wearing a dress of dignity",
+        "And adorning her head with jasmine",
+        "And singing the most beautiful melodies of freedom"
       ],
       year: "1975",
       likes: 367
     }
   ];
 
-  const categories = ["الكل", "معاصر", "رومانسي", "تراثي", "ديني", "مقاومة", "وصفي"];
-  const [selectedCategory, setSelectedCategory] = useState("الكل");
+  const categories = ["All", "Contemporary", "Romantic", "Traditional", "Religious", "Resistance", "Descriptive"];
+  const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const filteredPoems = selectedCategory === "الكل" 
+  const filteredPoems = selectedCategory === "All" 
     ? poems 
     : poems.filter(poem => poem.category === selectedCategory);
 
@@ -114,11 +114,11 @@ const Poems = () => {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12 animate-fade-in">
-          <h1 className="text-5xl font-bold font-amiri text-foreground mb-6">
-            قصائد وأشعار غزة
+          <h1 className="text-5xl font-bold text-foreground mb-6">
+            Gaza Poems and Poetry
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            مجموعة مختارة من القصائد والأشعار التي تتغنى بجمال غزة وتحكي قصتها الخالدة
+            A curated collection of poems and poetry celebrating Gaza's beauty and telling its eternal story
           </p>
         </div>
 
@@ -154,7 +154,7 @@ const Poems = () => {
                   </span>
                   <span className="text-sm text-muted-foreground">{poem.year}</span>
                 </div>
-                <CardTitle className="text-2xl font-amiri text-foreground mb-2">
+                <CardTitle className="text-2xl text-foreground mb-2">
                   {poem.title}
                 </CardTitle>
                 <p className="text-palestine-red font-medium">{poem.poet}</p>
@@ -164,7 +164,7 @@ const Poems = () => {
                   {poem.lines.map((line, lineIndex) => (
                     <p 
                       key={lineIndex} 
-                      className="text-foreground leading-relaxed font-amiri text-lg mb-2 text-center"
+                      className="text-foreground leading-relaxed text-lg mb-2 text-center italic"
                     >
                       {line}
                     </p>
@@ -172,10 +172,10 @@ const Poems = () => {
                 </div>
                 
                 <div className="flex items-center justify-between pt-4">
-                  <div className="flex items-center space-x-4 space-x-reverse">
+                  <div className="flex items-center space-x-4">
                     <button
                       onClick={() => toggleFavorite(poem.id)}
-                      className={`flex items-center space-x-2 space-x-reverse transition-colors duration-200 ${
+                      className={`flex items-center space-x-2 transition-colors duration-200 ${
                         favoritePoems.includes(poem.id) 
                           ? 'text-palestine-red' 
                           : 'text-muted-foreground hover:text-palestine-red'
@@ -187,9 +187,9 @@ const Poems = () => {
                       <span>{poem.likes}</span>
                     </button>
                     
-                    <button className="flex items-center space-x-2 space-x-reverse text-muted-foreground hover:text-palestine-green transition-colors duration-200">
+                    <button className="flex items-center space-x-2 text-muted-foreground hover:text-palestine-green transition-colors duration-200">
                       <Share2 className="w-5 h-5" />
-                      <span>شارك</span>
+                      <span>Share</span>
                     </button>
                   </div>
                   
@@ -198,8 +198,8 @@ const Poems = () => {
                     size="sm"
                     className="border-gaza-gold text-gaza-gold hover:bg-gaza-gold hover:text-white"
                   >
-                    <BookOpen className="w-4 h-4 ml-2" />
-                    اقرأ كاملة
+                    <BookOpen className="w-4 h-4 mr-2" />
+                    Read Full
                   </Button>
                 </div>
               </CardContent>
@@ -209,15 +209,15 @@ const Poems = () => {
 
         {/* Poetry Competition */}
         <div className="mt-16 bg-gradient-to-r from-palestine-red/10 to-palestine-green/10 rounded-lg p-8 animate-fade-in">
-          <h3 className="text-3xl font-amiri font-bold text-center text-foreground mb-6">
-            مسابقة شعرية
+          <h3 className="text-3xl font-bold text-center text-foreground mb-6">
+            Poetry Competition
           </h3>
           <p className="text-center text-muted-foreground mb-6 leading-relaxed max-w-2xl mx-auto">
-            شارك في مسابقتنا الشعرية السنوية واكتب قصيدة عن غزة الحبيبة
+            Participate in our annual poetry competition and write a poem about beloved Gaza
           </p>
           <div className="text-center">
             <Button className="bg-gaza-gold hover:bg-gaza-gold/90 text-white px-8 py-3 hover-scale">
-              شارك في المسابقة
+              Join the Competition
             </Button>
           </div>
         </div>

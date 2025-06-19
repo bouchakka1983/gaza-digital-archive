@@ -4,28 +4,28 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 const History = () => {
   const historicalPeriods = [
     {
-      period: 'العصر الكنعاني',
-      date: '3000 ق.م',
-      description: 'نشأت غزة كمدينة كنعانية هامة على الطريق التجاري بين مصر وبلاد الشام',
-      details: 'كانت غزة محطة مهمة على طريق البخور والتوابل، وازدهرت التجارة فيها بفضل موقعها الاستراتيجي.'
+      period: 'Canaanite Era',
+      date: '3000 BC',
+      description: 'Gaza emerged as an important Canaanite city on the trade route between Egypt and the Levant',
+      details: 'Gaza was an important station on the incense and spice route, and trade flourished thanks to its strategic location.'
     },
     {
-      period: 'العصر الإسلامي',
-      date: '635 م',
-      description: 'فتح المسلمون غزة وأصبحت مركزاً إسلامياً مهماً',
-      details: 'شهدت غزة ازدهاراً كبيراً في العصر الإسلامي، وبُنيت فيها المساجد والمدارس والأسواق.'
+      period: 'Islamic Era',
+      date: '635 AD',
+      description: 'Muslims conquered Gaza and it became an important Islamic center',
+      details: 'Gaza witnessed great prosperity in the Islamic era, with mosques, schools, and markets built.'
     },
     {
-      period: 'العصر العثماني',
-      date: '1516 م',
-      description: 'أصبحت غزة جزءاً من الإمبراطورية العثمانية',
-      details: 'كانت غزة مركزاً إدارياً مهماً في العصر العثماني، وازدهرت فيها الحرف والتجارة.'
+      period: 'Ottoman Era',
+      date: '1516 AD',
+      description: 'Gaza became part of the Ottoman Empire',
+      details: 'Gaza was an important administrative center in the Ottoman era, and crafts and trade flourished.'
     },
     {
-      period: 'العصر الحديث',
-      date: '1948 م',
-      description: 'النكبة وتأسيس قطاع غزة',
-      details: 'بعد حرب 1948، أصبحت غزة ملجأً لمئات الآلاف من اللاجئين الفلسطينيين.'
+      period: 'Modern Era',
+      date: '1948 AD',
+      description: 'The Nakba and the establishment of the Gaza Strip',
+      details: 'After the 1948 war, Gaza became a refuge for hundreds of thousands of Palestinian refugees.'
     }
   ];
 
@@ -34,11 +34,11 @@ const History = () => {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12 animate-fade-in">
-          <h1 className="text-5xl font-bold font-amiri text-foreground mb-6">
-            تاريخ غزة عبر العصور
+          <h1 className="text-5xl font-bold text-foreground mb-6">
+            Gaza's History Through the Ages
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            رحلة عبر التاريخ العريق لمدينة غزة، من النشأة الكنعانية حتى العصر الحديث
+            A journey through the ancient history of Gaza city, from Canaanite origins to the modern era
           </p>
         </div>
 
@@ -51,8 +51,8 @@ const History = () => {
             }}
           >
             <div className="absolute inset-0 bg-black/30 rounded-lg flex items-center justify-center">
-              <h2 className="text-4xl font-amiri font-bold text-white text-center">
-                أرض الحضارات المتعاقبة
+              <h2 className="text-4xl font-bold text-white text-center">
+                Land of Successive Civilizations
               </h2>
             </div>
           </div>
@@ -69,7 +69,7 @@ const History = () => {
               <Card className="bg-white shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-l-palestine-red">
                 <CardHeader>
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-                    <CardTitle className="text-2xl font-amiri text-foreground mb-2 md:mb-0">
+                    <CardTitle className="text-2xl text-foreground mb-2 md:mb-0">
                       {period.period}
                     </CardTitle>
                     <span className="text-lg font-bold text-palestine-red bg-palestine-red/10 px-4 py-2 rounded-full">
@@ -92,21 +92,21 @@ const History = () => {
 
         {/* Historical Facts */}
         <div className="mt-16 bg-gaza-sand/10 rounded-lg p-8 animate-fade-in">
-          <h3 className="text-3xl font-amiri font-bold text-center text-foreground mb-8">
-            حقائق تاريخية مثيرة
+          <h3 className="text-3xl font-bold text-center text-foreground mb-8">
+            Fascinating Historical Facts
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="text-center">
               <div className="text-4xl font-bold text-palestine-red mb-2">5000</div>
-              <p className="text-muted-foreground">سنة من التاريخ</p>
+              <p className="text-muted-foreground">Years of History</p>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-palestine-green mb-2">42</div>
-              <p className="text-muted-foreground">حضارة مرت بها</p>
+              <p className="text-muted-foreground">Civilizations</p>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-gaza-gold mb-2">365</div>
-              <p className="text-muted-foreground">كيلومتر مربع</p>
+              <p className="text-muted-foreground">Square Kilometers</p>
             </div>
           </div>
         </div>
