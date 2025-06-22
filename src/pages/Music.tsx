@@ -16,12 +16,12 @@ const Music = () => {
   const songs = [
     {
       id: 1,
-      title: "Ya Gaza",
-      artist: "Mohammed Assaf",
+      title: "Whispers of Gaza",
+      artist: "abdelghafour bouchakka",
       description: "A song celebrating Gaza's beauty and resilience",
-      duration: "4:32",
+      duration: "4:00",
       category: "Contemporary",
-      audioFile: "/audio/ya-gaza.mp3" // ضع ملفك الصوتي في مجلد public/audio/
+      audioFile: "/audio/Whispers of Gaza.mp3" // ضع ملفك الصوتي في مجلد public/audio/
     },
     {
       id: 2,
