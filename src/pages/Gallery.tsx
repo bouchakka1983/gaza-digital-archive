@@ -16,45 +16,59 @@ const Gallery = () => {
   const images = [
     {
       id: 1,
-      src: "<img src="https://lh3.googleusercontent.com/d/1pVknBSpxIKmXD6SQDJPHx5_K95fWhkBN" alt="">",
+      src: "/images/omari-mosque.jpg",
       title: "Great Omari Mosque",
       description: "One of the oldest mosques in Gaza",
       category: "historical"
     },
     {
       id: 2,
-      src: "https://images.unsplash.com/photo-1482881497185-d4a9ddbe4151?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      src: "/images/gaza-beach.jpg",
       title: "Gaza Beach",
       description: "The beautiful Palestinian coastline",
       category: "nature"
     },
     {
       id: 3,
-      src: "https://images.unsplash.com/photo-1426604966848-d7adac402bff?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      src: "/images/old-city.jpg",
       title: "Old City",
       description: "Gaza's historic alleyways",
       category: "architecture"
     },
     {
       id: 4,
-      src: "https://images.unsplash.com/photo-1466442929976-97f336a657be?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      src: "/images/traditional-crafts.jpg",
       title: "Traditional Crafts",
       description: "Traditional industries in Gaza",
       category: "culture"
     },
     {
       id: 5,
-      src: "https://images.unsplash.com/photo-1482881497185-d4a9ddbe4151?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      src: "/images/gaza-port.jpg",
       title: "Gaza Port",
       description: "The historic port",
       category: "historical"
     },
     {
       id: 6,
-      src: "https://images.unsplash.com/photo-1426604966848-d7adac402bff?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      src: "/images/local-markets.jpg",
       title: "Local Markets",
       description: "Gaza's traditional markets",
       category: "culture"
+    },
+    {
+      id: 7,
+      src: "/images/sunset-gaza.jpg",
+      title: "Gaza Sunset",
+      description: "Beautiful sunset over Gaza",
+      category: "nature"
+    },
+    {
+      id: 8,
+      src: "/images/historic-building.jpg",
+      title: "Historic Building",
+      description: "Traditional Palestinian architecture",
+      category: "architecture"
     }
   ];
 
@@ -106,6 +120,10 @@ const Gallery = () => {
                       src={image.src}
                       alt={image.title}
                       className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                      onError={(e) => {
+                        // Fallback to placeholder if image not found
+                        e.currentTarget.src = "/placeholder.svg";
+                      }}
                     />
                     <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                       <div className="p-4 text-white">
@@ -122,6 +140,9 @@ const Gallery = () => {
                     src={image.src}
                     alt={image.title}
                     className="w-full h-auto rounded-lg"
+                    onError={(e) => {
+                      e.currentTarget.src = "/placeholder.svg";
+                    }}
                   />
                   <div className="text-center">
                     <h3 className="text-2xl font-bold text-foreground mb-2">
@@ -133,6 +154,16 @@ const Gallery = () => {
               </DialogContent>
             </Dialog>
           ))}
+        </div>
+
+        {/* Instructions for adding images */}
+        <div className="mt-16 text-center bg-muted/50 p-8 rounded-lg">
+          <h3 className="text-xl font-semibold mb-4">إضافة صور جديدة</h3>
+          <p className="text-muted-foreground">
+            لإضافة صور جديدة، ضع الملفات في مجلد <code className="bg-background px-2 py-1 rounded">public/images/</code>
+            <br />
+            أو اسحب الصور مباشرة إلى محرر Lovable
+          </p>
         </div>
       </div>
     </div>
