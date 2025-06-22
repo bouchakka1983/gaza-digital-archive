@@ -16,7 +16,7 @@ const Gallery = () => {
   const images = [
     {
       id: 1,
-      src: "https://lh3.googleusercontent.com/d/1pVknBSpxIKmXD6SQDJPHx5_K95fWhkBN",
+      src: "<img src="https://lh3.googleusercontent.com/d/1pVknBSpxIKmXD6SQDJPHx5_K95fWhkBN" alt="">",
       title: "Great Omari Mosque",
       description: "One of the oldest mosques in Gaza",
       category: "historical"
