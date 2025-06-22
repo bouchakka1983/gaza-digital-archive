@@ -160,9 +160,9 @@ const Gallery = () => {
         <div className="mt-16 text-center bg-muted/50 p-8 rounded-lg">
           <h3 className="text-xl font-semibold mb-4">إضافة صور جديدة</h3>
           <p className="text-muted-foreground">
-            لإضافة صور جديدة، ضع الملفات في مجلد <code className="bg-background px-2 py-1 rounded">public/images/</code>
+             <code className="bg-background px-2 py-1 rounded">public/images/</code>
             <br />
-            أو اسحب الصور مباشرة إلى محرر Lovable
+            
           </p>
         </div>
       </div>
