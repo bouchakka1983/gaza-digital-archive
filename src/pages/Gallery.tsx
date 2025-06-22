@@ -154,19 +154,7 @@ const Gallery = () => {
               </DialogContent>
             </Dialog>
           ))}
-        </div>
 
-        {/* Instructions for adding images */}
-        <div className="mt-16 text-center bg-muted/50 p-8 rounded-lg">
-          <h3 className="text-xl font-semibold mb-4">إضافة صور جديدة</h3>
-          <p className="text-muted-foreground">
-             <code className="bg-background px-2 py-1 rounded">public/images/</code>
-            <br />
-            
-          </p>
-        </div>
-      </div>
-    </div>
   );
 };
 
