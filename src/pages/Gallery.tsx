@@ -154,7 +154,9 @@ const Gallery = () => {
               </DialogContent>
             </Dialog>
           ))}
-
+        </div>
+      </div>
+    </div>
   );
 };
 
