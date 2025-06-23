@@ -11,6 +11,7 @@ import History from "./pages/History";
 import Gallery from "./pages/Gallery";
 import Music from "./pages/Music";
 import Articles from "./pages/Articles";
+import ArticleDetail from "./pages/ArticleDetail";
 import Poems from "./pages/Poems";
 import Videos from "./pages/Videos";
 import NotFound from "./pages/NotFound";
@@ -32,6 +33,7 @@ const App = () => (
               <Route path="/gallery" element={<Gallery />} />
               <Route path="/music" element={<Music />} />
               <Route path="/articles" element={<Articles />} />
+              <Route path="/articles/:id" element={<ArticleDetail />} />
               <Route path="/poems" element={<Poems />} />
               <Route path="/videos" element={<Videos />} />
               <Route path="*" element={<NotFound />} />
