@@ -6,74 +6,74 @@ import { Button } from '@/components/ui/button';
 import { Calendar, User, Eye } from 'lucide-react';
 
 const Articles = () => {
-  const [selectedCategory, setSelectedCategory] = useState("الكل");
+  const [selectedCategory, setSelectedCategory] = useState("All");
 
   const articles = [
     {
       id: 1,
-      title: "غزة عبر التاريخ: من المدينة الكنعانية إلى العصر الحديث",
-      author: "د. أحمد الفلسطيني",
+      title: "Gaza Through History: From Canaanite City to Modern Era",
+      author: "Dr. Ahmad Al-Falastini",
       date: "2024-01-15",
-      excerpt: "دراسة شاملة عن تاريخ غزة من بداياتها المبكرة وحتى العصر الحديث، تتناول الحضارات المختلفة التي مرت على المدينة...",
-      readTime: "15 دقيقة",
+      excerpt: "A comprehensive study of Gaza's history from its early beginnings to the modern era, covering the different civilizations that passed through the city...",
+      readTime: "15 minutes",
       views: 1250,
-      category: "التاريخ"
+      category: "History"
     },
     {
       id: 2,
-      title: "العمارة الإسلامية في غزة: دراسة في المساجد التاريخية",
-      author: "د. فاطمة الغزاوي",
+      title: "Islamic Architecture in Gaza: A Study of Historic Mosques",
+      author: "Dr. Fatima Al-Ghazawi",
       date: "2024-01-10",
-      excerpt: "تحليل معماري للمساجد التاريخية في غزة، بما في ذلك الجامع العمري الكبير وجامع السيد هاشم...",
-      readTime: "12 دقيقة",
+      excerpt: "Architectural analysis of historic mosques in Gaza, including the Great Omari Mosque and Sayyid Hashim Mosque...",
+      readTime: "12 minutes",
       views: 890,
-      category: "العمارة"
+      category: "Architecture"
     },
     {
       id: 3,
-      title: "التراث الشعبي في غزة: الحرف والصناعات التقليدية",
-      author: "أ. محمد أبو سالم",
+      title: "Folk Heritage in Gaza: Traditional Crafts and Industries",
+      author: "Mohammad Abu Salem",
       date: "2024-01-05",
-      excerpt: "استعراض للحرف التقليدية في غزة مثل الفخار والنسيج والحياكة وأثرها على الهوية الثقافية...",
-      readTime: "10 دقائق",
+      excerpt: "Overview of traditional crafts in Gaza such as pottery, weaving, and knitting and their impact on cultural identity...",
+      readTime: "10 minutes",
       views: 672,
-      category: "التراث"
+      category: "Heritage"
     },
     {
       id: 4,
-      title: "غزة في الأدب العربي: صورة المدينة في الشعر والنثر",
-      author: "د. ليلى الشاعر",
+      title: "Gaza in Arabic Literature: The City's Image in Poetry and Prose",
+      author: "Dr. Layla Al-Shaer",
       date: "2023-12-28",
-      excerpt: "دراسة أدبية تبحث في صورة غزة في الأدب العربي الحديث والمعاصر، وكيف تجلت في أعمال الشعراء والكتاب...",
-      readTime: "18 دقيقة",
+      excerpt: "A literary study examining Gaza's image in modern and contemporary Arabic literature, and how it manifested in the works of poets and writers...",
+      readTime: "18 minutes",
       views: 1456,
-      category: "الأدب"
+      category: "Literature"
     },
     {
       id: 5,
-      title: "الاقتصاد في غزة التاريخية: التجارة والزراعة",
-      author: "د. عمر التاجر",
+      title: "Economy in Historic Gaza: Trade and Agriculture",
+      author: "Dr. Omar Al-Tajer",
       date: "2023-12-20",
-      excerpt: "بحث في النشاط الاقتصادي في غزة عبر التاريخ، من طرق التجارة القديمة إلى الزراعة والصيد...",
-      readTime: "14 دقيقة",
+      excerpt: "Research on economic activity in Gaza throughout history, from ancient trade routes to agriculture and fishing...",
+      readTime: "14 minutes",
       views: 743,
-      category: "الاقتصاد"
+      category: "Economy"
     },
     {
       id: 6,
-      title: "المرأة الغزية: دورها في المجتمع والتاريخ",
-      author: "د. عائشة الغزية",
+      title: "Gazan Women: Their Role in Society and History",
+      author: "Dr. Aisha Al-Ghaziya",
       date: "2023-12-15",
-      excerpt: "دراسة اجتماعية عن دور المرأة في المجتمع الغزي عبر التاريخ، ومساهمتها في حفظ التراث...",
-      readTime: "16 دقيقة",
+      excerpt: "A social study about women's role in Gazan society throughout history, and their contribution to preserving heritage...",
+      readTime: "16 minutes",
       views: 921,
-      category: "المجتمع"
+      category: "Society"
     }
   ];
 
-  const categories = ["الكل", "التاريخ", "العمارة", "التراث", "الأدب", "الاقتصاد", "المجتمع"];
+  const categories = ["All", "History", "Architecture", "Heritage", "Literature", "Economy", "Society"];
 
-  const filteredArticles = selectedCategory === "الكل" 
+  const filteredArticles = selectedCategory === "All" 
     ? articles 
     : articles.filter(article => article.category === selectedCategory);
 
@@ -83,10 +83,10 @@ const Articles = () => {
         {/* Header */}
         <div className="text-center mb-12 animate-fade-in">
           <h1 className="text-5xl font-bold text-foreground mb-6">
-            مقالات وأبحاث حول غزة
+            Articles and Research About Gaza
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            مجموعة من المقالات والأبحاث المتخصصة حول تاريخ غزة وثقافتها وتراثها
+            A collection of specialized articles and research about Gaza's history, culture and heritage
           </p>
         </div>
 
@@ -144,13 +144,13 @@ const Articles = () => {
                     </div>
                     <div className="flex items-center space-x-2">
                       <Calendar className="w-4 h-4" />
-                      <span>{new Date(article.date).toLocaleDateString('ar-EG')}</span>
+                      <span>{new Date(article.date).toLocaleDateString('en-US')}</span>
                     </div>
                   </div>
                 </div>
                 <Link to={`/articles/${article.id}`}>
                   <Button className="w-full bg-palestine-red hover:bg-palestine-red/90 text-white">
-                    اقرأ المقال كاملاً
+                    Read Full Article
                   </Button>
                 </Link>
               </CardContent>
@@ -161,14 +161,14 @@ const Articles = () => {
         {/* Research Section */}
         <div className="mt-16 bg-gaza-sand/10 rounded-lg p-8 animate-fade-in">
           <h3 className="text-3xl font-bold text-center text-foreground mb-6">
-            ساهم في الأبحاث
+            Contribute to Research
           </h3>
           <p className="text-center text-muted-foreground mb-6 leading-relaxed max-w-2xl mx-auto">
-            ندعو الباحثين والمهتمين للمساهمة في إثراء المكتبة الرقمية بمقالاتهم وأبحاثهم حول غزة
+            We invite researchers and enthusiasts to contribute to enriching the digital library with their articles and research about Gaza
           </p>
           <div className="text-center">
             <Button className="bg-palestine-green hover:bg-palestine-green/90 text-white px-8 py-3 hover-scale">
-              شارك بحثك
+              Share Your Research
             </Button>
           </div>
         </div>
